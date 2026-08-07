@@ -5,86 +5,87 @@
 :root {
   color-scheme: light;
 
-  --canvas: #f5f6f8;
+  --canvas: #f8f9fb;
   --surface: #ffffff;
-  --line: #e6e8ec;
+  --line: #e8eaee;
 
-  --strong: #101828;
+  --strong: #0f172a;
   --on-strong: #ffffff;
   --on-accent: #ffffff;
 
-  --ink: #101828;
-  --ink-2: #344054;
-  --ink-3: #667085;
-  --ink-4: #98a2b3;
+  --ink: #0f172a;
+  --ink-2: #334155;
+  --ink-3: #64748b;
+  --ink-4: #94a3b8;
 
-  --accent: #12a67a;
-  --accent-soft: #e6f6f0;
+  --accent: #0ea47a;
+  --accent-soft: #e6f4ef;
 
-  --risk-high: #d92d20;
-  --risk-high-soft: #fee4e2;
-  --risk-medium: #dc6803;
-  --risk-medium-soft: #fef0c7;
-  --risk-low: #039855;
-  --risk-low-soft: #d1fadf;
+  --risk-high: #e11d48;
+  --risk-high-soft: #fee2e2;
+  --risk-medium: #c2410c;
+  --risk-medium-soft: #fef3c7;
+  --risk-low: #15803d;
+  --risk-low-soft: #dcfce7;
 
-  --folder-amber: #f79009;
-  --folder-amber-soft: #fef0c7;
-  --folder-blue: #2e90fa;
-  --folder-blue-soft: #d1e9ff;
-  --folder-green: #12b76a;
-  --folder-green-soft: #d1fadf;
-  --folder-violet: #7a5af8;
-  --folder-violet-soft: #ebe9fe;
+  --folder-amber: #d97706;
+  --folder-amber-soft: #fef3c7;
+  --folder-blue: #2563eb;
+  --folder-blue-soft: #dbeafe;
+  --folder-green: #16a34a;
+  --folder-green-soft: #dcfce7;
+  --folder-violet: #7c3aed;
+  --folder-violet-soft: #ede9fe;
 
-  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04),
-    0 1px 3px rgba(16, 24, 40, 0.06);
-  --shadow-pop: 0 4px 16px rgba(16, 24, 40, 0.08);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06),
+    0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-pop: 0 10px 15px -3px rgba(15, 23, 42, 0.1),
+    0 4px 6px -4px rgba(15, 23, 42, 0.1);
 
-  --scroll-thumb: #d7dae0;
+  --scroll-thumb: #cbd5e1;
 }
 
 .dark {
   color-scheme: dark;
 
-  --canvas: #0e1116;
-  --surface: #151a21;
-  --line: #252c36;
+  --canvas: #0b0f17;
+  --surface: #12171f;
+  --line: #1f2937;
 
-  --strong: #e8ecf2;
-  --on-strong: #101828;
-  --on-accent: #05231a;
+  --strong: #f1f5f9;
+  --on-strong: #0f172a;
+  --on-accent: #052e1f;
 
-  --ink: #e8ecf2;
-  --ink-2: #c2cad6;
-  --ink-3: #8b95a5;
-  --ink-4: #667a8f;
+  --ink: #f1f5f9;
+  --ink-2: #cbd5e1;
+  --ink-3: #94a3b8;
+  --ink-4: #64748b;
 
-  --accent: #2dd4a7;
-  --accent-soft: #10312a;
+  --accent: #34d399;
+  --accent-soft: #052e1f;
 
-  /* Saturated reds vibrate on a dark ground, so the severity hues are
-     lightened and their tints pulled down to a low-luminance wash. */
-  --risk-high: #f97066;
-  --risk-high-soft: #3b1614;
-  --risk-medium: #fdb022;
-  --risk-medium-soft: #3a2610;
-  --risk-low: #47cd89;
-  --risk-low-soft: #10291d;
+  --risk-high: #fb7185;
+  --risk-high-soft: #431d1d;
+  --risk-medium: #fbbf24;
+  --risk-medium-soft: #3f2a0f;
+  --risk-low: #4ade80;
+  --risk-low-soft: #0f2a1f;
 
-  --folder-amber: #fdb022;
-  --folder-amber-soft: #3a2610;
-  --folder-blue: #53b1fd;
-  --folder-blue-soft: #10263c;
-  --folder-green: #47cd89;
-  --folder-green-soft: #10291d;
-  --folder-violet: #a48afb;
-  --folder-violet-soft: #241c46;
+  --folder-amber: #fbbf24;
+  --folder-amber-soft: #3f2a0f;
+  --folder-blue: #60a5fa;
+  --folder-blue-soft: #1e3a8a;
+  --folder-green: #4ade80;
+  --folder-green-soft: #0f2a1f;
+  --folder-violet: #a78bfa;
+  --folder-violet-soft: #2e1b4e;
 
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.25);
-  --shadow-pop: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-pop: 0 10px 15px -3px rgba(0, 0, 0, 0.5),
+    0 4px 6px -4px rgba(0, 0, 0, 0.4);
 
-  --scroll-thumb: #2f3743;
+  --scroll-thumb: #334155;
 }
 
 html,
@@ -98,16 +99,38 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, a {
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--scroll-thumb);
   border-radius: 999px;
-  border: 3px solid transparent;
+  border: 2px solid transparent;
   background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-4);
+}
+
+/* Subtle card polish */
+.rounded-xl {
+  border-radius: 12px;
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-pop {
+  box-shadow: var(--shadow-pop);
 }
