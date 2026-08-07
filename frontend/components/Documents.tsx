@@ -85,7 +85,7 @@ export default function Documents({
       </div>
 
       <div className="mt-5 flex items-center gap-3">
-        <div className="flex flex-1 items-center gap-2 rounded-lg border border-line bg-surface px-3 py-2.5 text-ink-4">
+        <div className="flex flex-1 items-center gap-2 rounded-2xl border border-line bg-surface px-3 py-2.5 text-ink-4">
           <SearchIcon className="h-4 w-4" />
           <input
             placeholder="Search for documents..."
@@ -94,7 +94,7 @@ export default function Documents({
         </div>
         <button
           type="button"
-          className="flex items-center gap-2 rounded-lg border border-line bg-surface px-3 py-2.5 text-[13px] text-ink-2"
+          className="flex items-center gap-2 rounded-2xl border border-line bg-surface px-3 py-2.5 text-[13px] text-ink-2"
         >
           Filter by
           <span className="text-ink-4">
@@ -104,7 +104,7 @@ export default function Documents({
       </div>
 
       {uploadError ? (
-        <p className="mt-4 rounded-lg border border-risk-high bg-risk-high-soft px-4 py-2.5 text-[13px] text-risk-high">
+        <p className="mt-4 rounded-2xl border border-risk-high bg-risk-high-soft px-4 py-2.5 text-[13px] text-risk-high">
           {uploadError}
         </p>
       ) : null}
@@ -121,12 +121,12 @@ export default function Documents({
           return (
             <div
               key={group.label}
-              className="rounded-xl border border-line bg-surface p-4 shadow-card"
+              className="rounded-2xl border border-line bg-surface p-4 shadow-card"
             >
               <div className="flex items-start justify-between">
                 <span
                   className={
-                    "flex h-9 w-9 items-center justify-center rounded-lg " +
+                    "flex h-9 w-9 items-center justify-center rounded-xl " +
                     group.tint +
                     " " +
                     group.fill
@@ -148,7 +148,7 @@ export default function Documents({
       </div>
 
       <h2 className="mt-7 text-[15px] font-semibold">Recent documents</h2>
-      <div className="mt-3 overflow-hidden rounded-xl border border-line bg-surface shadow-card">
+      <div className="mt-3 overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
         <div className="grid grid-cols-[minmax(0,1fr)_100px_150px_130px_60px] gap-4 border-b border-line px-5 py-3 text-[11px] font-semibold tracking-[0.04em] text-ink-4">
           <span>NAME</span>
           <span>SIZE</span>
@@ -166,7 +166,7 @@ export default function Documents({
               className="grid w-full grid-cols-[minmax(0,1fr)_100px_150px_130px_60px] items-center gap-4 border-b border-line px-5 py-3.5 text-left transition-colors last:border-0 hover:bg-canvas"
             >
               <span className="flex min-w-0 items-center gap-3">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-risk-high-soft text-risk-high">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-risk-high-soft text-risk-high">
                   <FileIcon className="h-4 w-4" />
                 </span>
                 <span className="min-w-0">
@@ -188,7 +188,7 @@ export default function Documents({
               <span>
                 <span
                   className={
-                    "rounded-md px-2 py-[3px] text-[11px] font-medium capitalize " +
+                    "rounded-lg px-2 py-[3px] text-[11px] font-medium capitalize " +
                     (RISK_CHIP[doc.riskBand] ?? "")
                   }
                 >

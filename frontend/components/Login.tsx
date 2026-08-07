@@ -116,7 +116,7 @@ export default function Login() {
     <div className="flex h-screen items-center justify-center bg-canvas px-6">
       <div className="w-full max-w-sm">
         <div className="mb-6 flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-strong text-onstrong">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-strong text-onstrong">
             <ScaleIcon className="h-5 w-5" />
           </span>
           <div>
@@ -125,7 +125,7 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="rounded-xl border border-line bg-surface p-6 shadow-card">
+        <div className="rounded-2xl border border-line bg-surface p-6 shadow-card">
           <h1 className="text-[16px] font-semibold">
             {mode === "in" ? "Sign in" : "Create an account"}
           </h1>
@@ -137,7 +137,7 @@ export default function Login() {
             type="button"
             onClick={withGoogle}
             disabled={oauthBusy || busy}
-            className="mt-5 flex h-10 w-full items-center justify-center gap-2.5 rounded-lg border border-line bg-surface text-[13px] font-medium text-ink transition-colors hover:bg-canvas disabled:opacity-50"
+            className="mt-5 flex h-10 w-full items-center justify-center gap-2.5 rounded-xl border border-line bg-surface text-[13px] font-medium text-ink transition-colors hover:bg-canvas disabled:opacity-50"
           >
             <GoogleMark className="h-[18px] w-[18px]" />
             {oauthBusy ? "Redirecting..." : "Continue with Google"}
@@ -161,7 +161,7 @@ export default function Login() {
                 onChange={(event) => setEmail(event.target.value)}
                 disabled={busy || oauthBusy}
                 placeholder="you@company.com"
-                className="mt-1.5 h-10 w-full rounded-lg border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent"
+                className="mt-1.5 h-10 w-full rounded-xl border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent"
               />
             </div>
 
@@ -175,14 +175,14 @@ export default function Login() {
                 onChange={(event) => setPassword(event.target.value)}
                 disabled={busy || oauthBusy}
                 placeholder="At least 6 characters"
-                className="mt-1.5 h-10 w-full rounded-lg border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent"
+                className="mt-1.5 h-10 w-full rounded-xl border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent"
               />
             </div>
 
             <button
               type="submit"
               disabled={busy || oauthBusy}
-              className="h-10 w-full rounded-lg bg-strong text-[13px] font-medium text-onstrong transition-opacity hover:opacity-90 disabled:opacity-50"
+              className="h-10 w-full rounded-xl bg-strong text-[13px] font-medium text-onstrong transition-opacity hover:opacity-90 disabled:opacity-50"
             >
               {busy
                 ? "Working..."

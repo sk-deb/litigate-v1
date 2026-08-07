@@ -43,15 +43,15 @@ function FindingCard({
       type="button"
       onClick={() => onSelect(finding.clauseId)}
       className={
-        "block w-full rounded-xl border border-l-[3px] border-line bg-surface p-4 text-left shadow-card transition-shadow hover:shadow-pop " +
+        "block w-full rounded-2xl border border-l-[4px] border-line bg-surface p-4 text-left shadow-card transition-all hover:shadow-pop active:scale-[0.995] " +
         (RISK_EDGE[finding.severity] ?? "")
       }
     >
       <div className="flex items-start justify-between gap-3">
-        <span className="text-[13px] font-semibold leading-5">{finding.title}</span>
+        <span className="text-[13.5px] font-semibold leading-5">{finding.title}</span>
         <span
           className={
-            "shrink-0 rounded-md px-2 py-[3px] text-[11px] font-medium capitalize " +
+            "shrink-0 rounded-lg px-2.5 py-0.5 text-[11px] font-medium capitalize " +
             (RISK_CHIP[finding.severity] ?? "")
           }
         >
@@ -59,15 +59,15 @@ function FindingCard({
         </span>
       </div>
 
-      <p className="mt-1 font-mono text-[11px] text-ink-4">
+      <p className="mt-1.5 font-mono text-[11px] text-ink-4">
         {finding.ruleId +
           (finding.clauseNumber ? "  \u00b7  Clause " + finding.clauseNumber : "")}
       </p>
 
-      <p className="mt-2.5 text-[12px] leading-5 text-ink-2">{finding.observed}</p>
+      <p className="mt-3 text-[12.5px] leading-5 text-ink-2">{finding.observed}</p>
 
       {finding.evidence ? (
-        <p className="mt-2.5 border-l-2 border-line pl-3 text-[12px] italic leading-5 text-ink-3">
+        <p className="mt-3 border-l-2 border-line pl-3 text-[12px] italic leading-5 text-ink-3">
           {finding.evidence}
         </p>
       ) : null}
@@ -75,11 +75,11 @@ function FindingCard({
       <Line label="Policy." value={finding.policy} />
 
       {explanation ? (
-        <div className="mt-3 rounded-lg bg-canvas p-3">
+        <div className="mt-3.5 rounded-xl bg-canvas p-3.5">
           <p className="text-[10px] font-semibold tracking-[0.06em] text-ink-4">
             PLAIN ENGLISH
           </p>
-          <p className="mt-1.5 text-[12px] leading-5 text-ink-2">
+          <p className="mt-1.5 text-[12.5px] leading-5 text-ink-2">
             {explanation.plain}
           </p>
           <Line label="Impact." value={explanation.impact} />
@@ -159,7 +159,7 @@ export default function Analysis({
         onDrop={onDrop}
         className="flex h-full flex-col items-center justify-center px-8"
       >
-        <div className="w-full max-w-md rounded-xl border border-dashed border-line bg-surface p-10 text-center shadow-card">
+        <div className="w-full max-w-md rounded-2xl border border-dashed border-line bg-surface p-10 text-center shadow-card">
           <p className="text-[15px] font-semibold">
             {busy ? "Analysing contract..." : "Open a contract"}
           </p>
@@ -286,7 +286,7 @@ export default function Analysis({
                   type="button"
                   onClick={() => onSelect(chosen ? null : clause.id)}
                   className={
-                    "flex w-full items-start gap-3 rounded-lg border px-3 py-2.5 text-left transition-colors " +
+                    "flex w-full items-start gap-3 rounded-xl border px-3.5 py-2.5 text-left transition-all " +
                     (chosen
                       ? "border-accent bg-accent-soft"
                       : "border-transparent hover:bg-surface")
@@ -314,7 +314,7 @@ export default function Analysis({
 
         <div className="min-h-0 overflow-y-auto px-6 py-5">
           {active ? (
-            <div className="mb-4 rounded-xl border border-line bg-surface p-4 shadow-card">
+            <div className="mb-4 rounded-2xl border border-line bg-surface p-4 shadow-card">
               <p className="text-[11px] font-semibold tracking-[0.06em] text-ink-4">
                 {"CLAUSE " + active.number}
               </p>
@@ -353,7 +353,7 @@ export default function Analysis({
               ))}
             </div>
           ) : (
-            <div className="rounded-xl border border-line bg-surface p-8 text-center shadow-card">
+            <div className="rounded-2xl border border-line bg-surface p-8 text-center shadow-card">
               <p className="text-[13px] font-medium text-accent">
                 No policy breach on this clause
               </p>

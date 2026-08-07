@@ -60,7 +60,7 @@ export default function RiskRegister({
         ))}
       </div>
 
-      <div className="mt-4 overflow-hidden rounded-xl border border-line bg-surface shadow-card">
+      <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
         <div className="grid grid-cols-[90px_110px_minmax(0,1.1fr)_minmax(0,1fr)_110px] gap-4 border-b border-line px-5 py-3 text-[11px] font-semibold tracking-[0.04em] text-ink-4">
           <span>SEVERITY</span>
           <span>CLAUSE</span>
@@ -80,7 +80,7 @@ export default function RiskRegister({
               <span>
                 <span
                   className={
-                    "rounded-md px-2 py-[3px] text-[11px] font-medium capitalize " +
+                    "rounded-lg px-2 py-[3px] text-[11px] font-medium capitalize " +
                     (RISK_CHIP[finding.severity] ?? "")
                   }
                 >

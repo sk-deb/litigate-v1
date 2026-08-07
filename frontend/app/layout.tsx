@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
       </head>
-      <body className="bg-canvas text-ink">{children}</body>
+      <body className="bg-canvas text-ink antialiased">{children}</body>
     </html>
   )
 }
