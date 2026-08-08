@@ -101,7 +101,7 @@ export default function Assistant({
       <div className="min-h-0 flex-1 overflow-y-auto px-8 py-6">
         {messages.length === 0 ? (
           <div className="mx-auto max-w-2xl">
-            <div className="rounded-xl border border-line bg-surface p-6 text-center shadow-card">
+            <div className="rounded-2xl border border-line bg-surface p-6 text-center shadow-card">
               <span className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent">
                 <ChatIcon className="h-5 w-5" />
               </span>
@@ -122,7 +122,7 @@ export default function Assistant({
                   type="button"
                   disabled={!contract || busy}
                   onClick={() => send(item)}
-                  className="rounded-xl border border-line bg-surface p-3.5 text-left text-[12.5px] leading-5 text-ink-2 shadow-card transition-shadow hover:shadow-pop disabled:opacity-50"
+                  className="rounded-2xl border border-line bg-surface p-3.5 text-left text-[12.5px] leading-5 text-ink-2 shadow-card transition-shadow hover:shadow-pop disabled:opacity-50"
                 >
                   {item}
                 </button>

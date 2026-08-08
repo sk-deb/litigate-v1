@@ -52,7 +52,7 @@ export default function EmailReport({
   }
 
   return (
-    <div className="mt-4 rounded-xl border border-line bg-surface p-5 shadow-card">
+    <div className="mt-4 rounded-2xl border border-line bg-surface p-5 shadow-card">
       <div className="flex items-start justify-between gap-6">
         <div>
           <h2 className="text-[14px] font-semibold">Escalate to owner</h2>
@@ -64,7 +64,7 @@ export default function EmailReport({
         </div>
 
         {summary ? (
-          <span className="shrink-0 rounded-md bg-canvas px-2.5 py-1 text-[11px] text-ink-3">
+          <span className="shrink-0 rounded-lg bg-canvas px-2.5 py-1 text-[11px] text-ink-3">
             {summary.total + " issues queued"}
           </span>
         ) : null}
@@ -72,7 +72,7 @@ export default function EmailReport({
 
       <form onSubmit={send} className="mt-4 flex items-center gap-2">
         {email ? (
-          <span className="flex h-9 w-full items-center gap-2 rounded-lg border border-line bg-canvas px-3 text-[13px] text-ink-2">
+          <span className="flex h-9 w-full items-center gap-2 rounded-xl border border-line bg-canvas px-3 text-[13px] text-ink-2">
             <span className="text-ink-4">Sending to</span>
             <span className="truncate font-medium">{email}</span>
           </span>
@@ -83,14 +83,13 @@ export default function EmailReport({
             onChange={(event) => setTo(event.target.value)}
             disabled={!ready || busy}
             placeholder="owner@company.com"
-            className="h-9 w-full rounded-lg border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent disabled:cursor-not-allowed disabled:opacity-60"
-          />
-        )}
+            className="h-9 w-full rounded-xl border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent disabled:cursor-not-allowed disabled:opacity-60"
+          )}
 
         <button
           type="submit"
           disabled={!ready || busy}
-          className="flex h-9 shrink-0 items-center gap-2 rounded-lg bg-strong px-4 text-[13px] font-medium text-onstrong transition-opacity hover:opacity-90 disabled:opacity-40"
+          className="flex h-9 shrink-0 items-center gap-2 rounded-xl bg-strong px-4 text-[13px] font-medium text-onstrong transition-opacity hover:opacity-90 disabled:opacity-40"
         >
           <SendIcon className="h-3.5 w-3.5" />
           {busy ? "Sending..." : "Send report"}

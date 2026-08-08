@@ -37,12 +37,12 @@ export default function Playbook() {
       </p>
 
       {error ? (
-        <p className="mt-4 rounded-lg border border-risk-high bg-risk-high-soft px-4 py-2.5 text-[13px] text-risk-high">
+        <p className="mt-4 rounded-2xl border border-risk-high bg-risk-high-soft px-4 py-2.5 text-[13px] text-risk-high">
           {error}
         </p>
       ) : null}
 
-      <div className="mt-5 overflow-hidden rounded-xl border border-line bg-surface shadow-card">
+      <div className="mt-5 overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
         <div className="grid grid-cols-[90px_150px_minmax(0,1fr)_minmax(0,1.3fr)] gap-4 border-b border-line px-5 py-3 text-[11px] font-semibold tracking-[0.04em] text-ink-4">
           <span>RULE</span>
           <span>CLAUSE TYPE</span>
@@ -64,7 +64,7 @@ export default function Playbook() {
                 <span className="block text-[13px] leading-5">{rule.title}</span>
                 <span
                   className={
-                    "mt-1 inline-block rounded-md px-2 py-[2px] text-[11px] font-medium capitalize " +
+                    "mt-1 inline-block rounded-lg px-2 py-[2px] text-[11px] font-medium capitalize " +
                     (RISK_CHIP[rule.severity] ?? "")
                   }
                 >
