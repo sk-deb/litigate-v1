@@ -274,7 +274,6 @@ export default function Analysis({
                 Clear filter
               </button>
             ) : null}
-          </div>
 
           <div className="space-y-1.5">
             {clauses.map((clause) => {

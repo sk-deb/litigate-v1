@@ -1,0 +1,12 @@
+services:
+  - type: static
+    name: litigate-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./out
+    envVars:
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: NEXT_PUBLIC_API_URL
+        sync: false

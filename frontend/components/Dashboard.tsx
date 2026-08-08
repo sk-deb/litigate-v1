@@ -55,7 +55,7 @@ function Bar({
         <div
           className={"h-full rounded-full transition-all " + (RISK_FILL[severity] ?? "bg-ink-4")}
           style={{ width: width + "%" }}
-        />
+        </div>
       </div>
     </div>
   )
@@ -129,8 +129,7 @@ export default function Dashboard({
             summary && summary.grounded === summary.total ? "text-accent" : ""
           }
           icon={<ShieldIcon className="h-4 w-4" />}
-        />
-      </div>
+        </div>
 
       {summary ? (
         <div className="mt-4 grid grid-cols-3 gap-4">
@@ -227,7 +226,7 @@ export default function Dashboard({
                   <span className="block truncate text-[13.5px] font-medium">
                     {finding.title}
                   </span>
-                  <span className="block truncate text-[12px] text-ink-3">
+                  <span className="block truncate
                     {finding.observed}
                   </span>
                 </span>

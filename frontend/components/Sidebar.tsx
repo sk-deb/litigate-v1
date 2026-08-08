@@ -67,13 +67,13 @@ export default function Sidebar({
         type="button"
         onClick={() => onSelect(item.id)}
         className={
-          "flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[13px] transition-all " +
+          "flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text/[13px] transition-all " +
           (active
             ? "bg-accent font-medium text-onaccent shadow-sm"
             : "text-ink-2 hover:bg-canvas hover:text-ink")
         }
       >
-        <Icon className="h-[18px] w-[18px] shrink-0" />
+        <Icon className="h/[18px] w/[18px] shrink-0" />
         <span className="truncate">{item.label}</span>
       </button>
     )
@@ -83,14 +83,14 @@ export default function Sidebar({
   const initial = email ? email.charAt(0).toUpperCase() : "L"
 
   return (
-    <aside className="flex h-full w-[240px] shrink-0 flex-col border-r border-line bg-surface">
+    <aside className="flex h-full w/[240px] shrink-0 flex-col border-r border-line bg-surface">
       <div className="flex items-center gap-3 px-5 py-5">
-        <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-strong text-[14px] font-semibold text-onstrong">
+        <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-strong text/[14px] font-semibold text-onstrong">
           L
         </span>
         <div>
-          <span className="text-[15px] font-semibold tracking-tight">Litigate</span>
-          <div className="text-[10px] text-ink-4 -mt-0.5">Risk &amp; Governance</div>
+          <span className="text/[15px] font-semibold tracking-tight">Litigate</span>
+          <div className="text/[10px] text-ink-4 -mt-0.5">Risk &amp; Governance</div>
         </div>
         <ChevronIcon className="ml-auto h-4 w-4 text-ink-4" />
       </div>
@@ -100,7 +100,7 @@ export default function Sidebar({
           <SearchIcon className="h-4 w-4" />
           <input
             placeholder="Search contracts, clauses..."
-            className="w-full bg-transparent text-[13px] text-ink outline-none placeholder:text-ink-4"
+            className="w-full bg-transparent text/[13px] text-ink outline-none placeholder:text-ink-4"
           />
         </div>
       </div>
@@ -108,12 +108,12 @@ export default function Sidebar({
       <nav className="flex-1 overflow-y-auto px-3 pb-4">
         <div className="space-y-1">{PRIMARY.map(renderItem)}</div>
 
-        <p className="px-3 pb-1.5 pt-6 text-[10px] font-semibold tracking-[0.1em] text-ink-4">
+        <p className="px-3 pb-1.5 pt-6 text/[10px] font-semibold tracking-[0.1em] text-ink-4">
           ANALYSIS
         </p>
         <div className="space-y-1">{ANALYSIS.map(renderItem)}</div>
 
-        <p className="px-3 pb-1.5 pt-6 text-[10px] font-semibold tracking-[0.1em] text-ink-4">
+        <p className="px-3 pb-1.5 pt-6 text/[10px] font-semibold tracking-[0.1em] text-ink-4">
           GOVERNANCE
         </p>
         <div className="space-y-1">{GOVERNANCE.map(renderItem)}</div>
@@ -122,17 +122,17 @@ export default function Sidebar({
       <div className="border-t border-line px-3 py-3">
         <button
           type="button"
-          className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text-[13px] text-ink-2 transition-colors hover:bg-canvas hover:text-ink"
+          className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-left text/[13px] text-ink-2 transition-colors hover:bg-canvas hover:text-ink"
         >
-          <GearIcon className="h-[18px] w-[18px]" />
+          <GearIcon className="h/[18px] w/[18px]" />
           Settings
         </button>
 
-        <div className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text-[13px] text-ink-2">
-          <BellIcon className="h-[18px] w-[18px]" />
+        <div className="flex w-full items-center gap-3 rounded-xl px-3.5 py-2.5 text/[13px] text-ink-2">
+          <BellIcon className="h/[18px] w/[18px]" />
           Notifications
           {alerts > 0 ? (
-            <span className="ml-auto rounded-full bg-risk-high-soft px-2 py-[1px] text-[11px] font-medium text-risk-high">
+            <span className="ml-auto rounded-full bg-risk-high-soft px-2 py/[1px] text/[11px] font-medium text-risk-high">
               {alerts}
             </span>
           ) : null}
@@ -141,14 +141,14 @@ export default function Sidebar({
         <ThemeToggle />
 
         <div className="mt-2 flex items-center gap-2.5 rounded-2xl bg-canvas px-3 py-2">
-          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-[12px] font-semibold text-onaccent">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text/[12px] font-semibold text-onaccent">
             {initial}
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block truncate text-[13px] font-medium" title={label}>
+            <span className="block truncate text/[13px] font-medium" title={label}>
               {label}
             </span>
-            <span className="block text-[11px] text-ink-4">
+            <span className="block text/[11px] text-ink-4">
               {email ? "Alerts sent here" : "Not signed in"}
             </span>
           </span>
@@ -165,7 +165,7 @@ export default function Sidebar({
           <button
             type="button"
             onClick={onSignOut}
-            className="mt-2 w-full rounded-xl px-3.5 py-2 text-left text-[12.5px] text-ink-3 transition-colors hover:bg-canvas hover:text-ink-2"
+            className="mt-2 w-full rounded-xl px-3.5 py-2 text-left text/[12.5px] text-ink-3 transition-colors hover:bg-canvas hover:text-ink-2"
           >
             Sign out
           </button>

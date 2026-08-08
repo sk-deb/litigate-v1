@@ -35,8 +35,8 @@ export default function RiskRegister({
 
   return (
     <div className="h-full overflow-y-auto px-8 py-7">
-      <h1 className="text-[22px] font-semibold tracking-tight">Risk Register</h1>
-      <p className="mt-1 text-[13px] text-ink-3">
+      <h1 className="text/[22px] font-semibold tracking-tight">Risk Register</h1>
+      <p className="mt-1 text/[13px] text-ink-3">
         Every breach the rule engine proved against{" "}
         {summary?.playbook ?? "the playbook"}. Each row cites the clause wording
         it was measured from.
@@ -49,7 +49,7 @@ export default function RiskRegister({
             type="button"
             onClick={() => setFilter(value)}
             className={
-              "rounded-full border px-3.5 py-1.5 text-[12px] font-medium capitalize transition-colors " +
+              "rounded-full border px-3.5 py-1.5 text/[12px] font-medium capitalize transition-colors " +
               (filter === value
                 ? "border-strong bg-strong text-onstrong"
                 : "border-line bg-surface text-ink-2 hover:bg-canvas")
@@ -61,7 +61,7 @@ export default function RiskRegister({
       </div>
 
       <div className="mt-4 overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
-        <div className="grid grid-cols-[90px_110px_minmax(0,1.1fr)_minmax(0,1fr)_110px] gap-4 border-b border-line px-5 py-3 text-[11px] font-semibold tracking-[0.04em] text-ink-4">
+        <div className="grid grid-cols-[90px_110px_minmax(0,1.1fr)_minmax(0,1fr)_110px] gap-4 border-b border-line px-5 py-3 text/[11px] font-semibold tracking-[0.04em] text-ink-4">
           <span>SEVERITY</span>
           <span>CLAUSE</span>
           <span>ISSUE</span>
@@ -80,7 +80,7 @@ export default function RiskRegister({
               <span>
                 <span
                   className={
-                    "rounded-lg px-2 py-[3px] text-[11px] font-medium capitalize " +
+                    "rounded-lg px-2 py/[3px] text/[11px] font-medium capitalize " +
                     (RISK_CHIP[finding.severity] ?? "")
                   }
                 >
@@ -88,25 +88,25 @@ export default function RiskRegister({
                 </span>
               </span>
 
-              <span className="font-mono text-[12px] text-ink-2">
+              <span className="font-mono text/[12px] text-ink-2">
                 {finding.clauseNumber || "Missing"}
               </span>
 
               <span className="min-w-0">
-                <span className="block text-[13px] font-medium leading-5">
+                <span className="block text/[13px] font-medium leading-5">
                   {finding.title}
                 </span>
-                <span className="mt-0.5 block font-mono text-[11px] text-ink-4">
+                <span className="mt-0.5 block font-mono text/[11px] text-ink-4">
                   {finding.ruleId + " \u00b7 " + titleCase(finding.clauseType)}
                 </span>
                 {briefing[finding.id] ? (
-                  <span className="mt-1.5 block text-[12px] leading-5 text-ink-3">
+                  <span className="mt-1.5 block text/[12px] leading-5 text-ink-3">
                     {briefing[finding.id].impact}
                   </span>
                 ) : null}
               </span>
 
-              <span className="text-[12px] leading-5 text-ink-2">
+              <span className="text/[12px] leading-5 text-ink-2">
                 {finding.observed}
               </span>
 
@@ -119,7 +119,7 @@ export default function RiskRegister({
                 />
                 <span
                   className={
-                    "text-[11px] font-medium " +
+                    "text/[11px] font-medium " +
                     (finding.grounded ? "text-accent" : "text-risk-medium")
                   }
                 >
@@ -130,8 +130,8 @@ export default function RiskRegister({
           ))
         ) : (
           <div className="px-5 py-12 text-center">
-            <p className="text-[14px] font-medium text-ink-2">Nothing to show</p>
-            <p className="mt-1.5 text-[13px] text-ink-3">
+            <p className="text/[14px] font-medium text-ink-2">Nothing to show</p>
+            <p className="mt-1.5 text/[13px] text-ink-3">
               {findings.length
                 ? "No findings at this severity."
                 : "Upload a contract to populate the register."}

@@ -132,12 +132,12 @@ export default function Documents({
                     group.fill
                   }
                 >
-                  <FolderIcon className="h-[18px] w-[18px]" />
+                  <FolderIcon className="h/[18px] w/[18px]" />
                 </span>
                 <DotsIcon className="h-4 w-4 text-ink-4" />
               </div>
-              <p className="mt-3 text-[13px] font-medium">{group.label}</p>
-              <p className="mt-1 text-[12px] text-ink-4">
+              <p className="mt-3 text/[13px] font-medium">{group.label}</p>
+              <p className="mt-1 text/[12px] text-ink-4">
                 {inGroup.length +
                   " clauses" +
                   (flagged.length ? " \u00b7 " + flagged.length + " flagged" : "")}
@@ -147,9 +147,9 @@ export default function Documents({
         })}
       </div>
 
-      <h2 className="mt-7 text-[15px] font-semibold">Recent documents</h2>
+      <h2 className="mt-7 text/[15px] font-semibold">Recent documents</h2>
       <div className="mt-3 overflow-hidden rounded-2xl border border-line bg-surface shadow-card">
-        <div className="grid grid-cols-[minmax(0,1fr)_100px_150px_130px_60px] gap-4 border-b border-line px-5 py-3 text-[11px] font-semibold tracking-[0.04em] text-ink-4">
+        <div className="grid grid-cols-[minmax(0,1fr)_100px_150px_130px_60px] gap-4 border-b border-line px-5 py-3 text/[11px] font-semibold tracking-[0.04em] text-ink-4">
           <span>NAME</span>
           <span>SIZE</span>
           <span>ANALYSED</span>
@@ -170,10 +170,10 @@ export default function Documents({
                   <FileIcon className="h-4 w-4" />
                 </span>
                 <span className="min-w-0">
-                  <span className="block truncate text-[13px] font-medium">
+                  <span className="block truncate text/[13px] font-medium">
                     {doc.name}
                   </span>
-                  <span className="block text-[12px] text-ink-4">
+                  <span className="block text/[12px] text-ink-4">
                     {doc.clauseCount +
                       " clauses \u00b7 " +
                       doc.findingCount +
@@ -181,14 +181,14 @@ export default function Documents({
                   </span>
                 </span>
               </span>
-              <span className="text-[13px] text-ink-3">{fileSize(doc.bytes)}</span>
-              <span className="text-[13px] text-ink-3">
+              <span className="text/[13px] text-ink-3">{fileSize(doc.bytes)}</span>
+              <span className="text/[13px] text-ink-3">
                 {whenLabel(doc.uploadedAt)}
               </span>
               <span>
                 <span
                   className={
-                    "rounded-lg px-2 py-[3px] text-[11px] font-medium capitalize " +
+                    "rounded-lg px-2 py/[3px] text/[11px] font-medium capitalize " +
                     (RISK_CHIP[doc.riskBand] ?? "")
                   }
                 >
@@ -202,10 +202,10 @@ export default function Documents({
           ))
         ) : (
           <div className="px-5 py-12 text-center">
-            <p className="text-[14px] font-medium text-ink-2">
+            <p className="text/[14px] font-medium text-ink-2">
               {busy ? "Analysing document..." : "No documents yet"}
             </p>
-            <p className="mx-auto mt-1.5 max-w-sm text-[13px] leading-6 text-ink-3">
+            <p className="mx-auto mt-1.5 max-w-sm text/[13px] leading-6 text-ink-3">
               {busy
                 ? "The first request can take up to a minute if the API was idle."
                 : "Drop a contract anywhere on this page, or use Upload. The file needs selectable text, so scans will not work."}

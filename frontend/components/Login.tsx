@@ -120,16 +120,16 @@ export default function Login() {
             <ScaleIcon className="h-5 w-5" />
           </span>
           <div>
-            <p className="text-[17px] font-semibold tracking-tight">Litigate</p>
-            <p className="text-[12px] text-ink-3">Contract risk and policy governance</p>
+            <p className="text/[17px] font-semibold tracking-tight">Litigate</p>
+            <p className="text/[12px] text-ink-3">Contract risk and policy governance</p>
           </div>
         </div>
 
         <div className="rounded-2xl border border-line bg-surface p-6 shadow-card">
-          <h1 className="text-[16px] font-semibold">
+          <h1 className="text/[16px] font-semibold">
             {mode === "in" ? "Sign in" : "Create an account"}
           </h1>
-          <p className="mt-1 text-[12.5px] leading-5 text-ink-3">
+          <p className="mt-1 text/[12.5px] leading-5 text-ink-3">
             Risk alerts are sent to this address.
           </p>
 
@@ -137,15 +137,15 @@ export default function Login() {
             type="button"
             onClick={withGoogle}
             disabled={oauthBusy || busy}
-            className="mt-5 flex h-10 w-full items-center justify-center gap-2.5 rounded-xl border border-line bg-surface text-[13px] font-medium text-ink transition-colors hover:bg-canvas disabled:opacity-50"
+            className="mt-5 flex h-10 w-full items-center justify-center gap-2.5 rounded-xl border border-line bg-surface text/[13px] font-medium text-ink transition-colors hover:bg-canvas disabled:opacity-50"
           >
-            <GoogleMark className="h-[18px] w-[18px]" />
+            <GoogleMark className="h/[18px] w/[18px]" />
             {oauthBusy ? "Redirecting..." : "Continue with Google"}
           </button>
 
           <div className="my-5 flex items-center gap-3">
             <span className="h-px flex-1 bg-line" />
-            <span className="text-[11px] uppercase tracking-[0.06em] text-ink-4">
+            <span className="text/[11px] uppercase tracking-[0.06em] text-ink-4">
               or
             </span>
             <span className="h-px flex-1 bg-line" />
@@ -153,7 +153,7 @@ export default function Login() {
 
           <form onSubmit={submit} className="space-y-3">
             <div>
-              <label className="text-[12px] font-medium text-ink-2">Email</label>
+              <label className="text/[12px] font-medium text-ink-2">Email</label>
               <input
                 type="email"
                 required
@@ -161,12 +161,12 @@ export default function Login() {
                 onChange={(event) => setEmail(event.target.value)}
                 disabled={busy || oauthBusy}
                 placeholder="you@company.com"
-                className="mt-1.5 h-10 w-full rounded-xl border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent"
+                className="mt-1.5 h-10 w-full rounded-xl border border-line bg-canvas px-3 text/[13px] outline-none placeholder:text-ink-4 focus:border-accent"
               />
             </div>
 
             <div>
-              <label className="text-[12px] font-medium text-ink-2">Password</label>
+              <label className="text/[12px] font-medium text-ink-2">Password</label>
               <input
                 type="password"
                 required
@@ -175,14 +175,14 @@ export default function Login() {
                 onChange={(event) => setPassword(event.target.value)}
                 disabled={busy || oauthBusy}
                 placeholder="At least 6 characters"
-                className="mt-1.5 h-10 w-full rounded-xl border border-line bg-canvas px-3 text-[13px] outline-none placeholder:text-ink-4 focus:border-accent"
+                className="mt-1.5 h-10 w-full rounded-xl border border-line bg-canvas px-3 text/[13px] outline-none placeholder:text-ink-4 focus:border-accent"
               />
             </div>
 
             <button
               type="submit"
               disabled={busy || oauthBusy}
-              className="h-10 w-full rounded-xl bg-strong text-[13px] font-medium text-onstrong transition-opacity hover:opacity-90 disabled:opacity-50"
+              className="h-10 w-full rounded-xl bg-strong text/[13px] font-medium text-onstrong transition-opacity hover:opacity-90 disabled:opacity-50"
             >
               {busy
                 ? "Working..."
@@ -195,7 +195,7 @@ export default function Login() {
           {note ? (
             <p
               className={
-                "mt-4 rounded-lg px-3 py-2 text-[12px] leading-5 " +
+                "mt-4 rounded-lg px-3 py-2 text/[12px] leading-5 " +
                 (failed
                   ? "bg-risk-high-soft text-risk-high"
                   : "bg-accent-soft text-accent")
@@ -212,7 +212,7 @@ export default function Login() {
               setNote(null)
               setFailed(false)
             }}
-            className="mt-4 w-full text-[12.5px] text-ink-3 hover:text-ink-2"
+            className="mt-4 w-full text/[12.5px] text-ink-3 hover:text-ink-2"
           >
             {mode === "in"
               ? "No account yet? Create one"
